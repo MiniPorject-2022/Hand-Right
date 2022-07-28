@@ -20,17 +20,8 @@
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Basic -->
-    <meta charset="UTF-8" />
-    <meta name="theme-color" content="#09f" />
-  
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="author" content="Team Hand-Right" />
-    <meta name="copyright" content="Team Hand-Right" />
-
-  
-
-    <title>Hand-Right</title>
+   
+    <title>Hand Right</title>
 
     <!-- Favicons -->
     <link
@@ -67,35 +58,42 @@
 
   <body>
     <main>
+      <div class="cover" >
+      <h1>Hand -<span style="color:#f50057 ;"> Right</span></h1>
+      </div>
+      <br>
+      <div class="flex-1 page-container-super">
       
-      <h1>Hand-Right</h1>
+
+        <div class="flex-1 page-container" >
+          <div class="page-a margined lines">
+            <div contenteditable="true" class="top-margin"></div>
+            <div class="display-flex left-margin-and-content">
+              <div contenteditable="true" class="left-margin"></div>
+              <div class="paper-content" id="note" contenteditable="true">
+                Input Text Here
+              </div>
+            </div>
+            <div class="overlay"></div>
+          </div>
+          <br />
+        </div>
       <section class="generate-image-section">
-        <br /><br />
         <form id="generate-image-form">
           <!-- Generate Image Section -->
-          <div class ="text-part">
           <div class="display-flex output-grid responsive-flex">
-            <div class="flex-1 page-container-super">
+            
+
               <div>
-                <h2 style="margin-top: 0px;">Input</h2>
-                <label class="block" for="note">Type/Paste text here</label>
+                <button
+                  id="draw-diagram-button"
+                  type="button"
+                  style="font-size: 0rem; margin-top: 5px;background-color: white;"
+                  class="draw-button"
+                >
+                  Draw <small>(Beta)</small>
+                </button>
               </div>
-
-              <div class="flex-1 page-container">
-                <div class="page-a margined lines">
-                  <div contenteditable="true" class="top-margin"></div>
-                  <div class="display-flex left-margin-and-content">
-                    <div contenteditable="true" class="left-margin"></div>
-                    <div class="paper-content" id="note" contenteditable="true">
-                      Type Here
-                    </div>
-                  </div>
-                  <div class="overlay"></div>
-                </div>
-                <br />
-              </div>
-
-             
             </div>
 
             <div class="customization-col">
@@ -126,7 +124,6 @@
                         Homemade Apple
                       </option>
                       <option value="Hindi_Font">Kruti-dev(Hindi)</option>
-                      <option value="Malyalam">Malayalam</option>
                       <option
                         style="font-family: 'Caveat', cursive; font-size: 13pt;"
                         value="'Caveat', cursive"
@@ -146,8 +143,12 @@
                   </div>
                   <div class="upload-handwriting-container">
                     <label class="block" for="font-file"
-                      >Upload your handwriting font &nbsp;
-                    
+                      >Upload your handwriting font <small>(Beta)</small>&nbsp;
+                      <a
+                        style="font-size: 1.1rem;"
+                        title="How to add your own handwriting"
+                        href="#how-to-add-handwriting"
+                      >
                         &#9432;
                       </a>
                     </label>
@@ -318,7 +319,7 @@
 
       <!-- OUTPUT -->
       <section>
-        <h2 id="output-header">Output</h2>
+        <h2 id="output-header" style="color:white;">Output</h2>
         <div id="output" class="output" style="text-align: center;">
           Click "Generate Image" Button to generate new image.
         </div>
@@ -331,20 +332,16 @@
           </button>
         </div>
       </section>
-    </div>
-    <footer style="padding: 40px 0px 10px 0px;">
-      Thank you for using Text to Hand-Right! You can follow me on
-      <a href="https://twitter.com/aevintom">Tinder @aevintom</a>
-      <br /><br />Do star the
-      <a href="https://github.com/aevintomanish/text-to-handwriting"
-        >Text-to-Handwriting GitHub Repository</a
-      >
+
+      
+    </main>
+    <footer style="padding: 40px 0px 10px 0px; color : white ;">
+      Thank you for using Hand-Right!
+      
+
       and If you're using it for writing assignments, make sure you use it at
-      your own risk and If it fails and your teacher finds this tool, ask them
-      to star my GitHub as well :D <br />
-      <br />byeeee! <br /><br />
-      ~ Team Hand-Right (<a href="aevinanish@gmail.com">Myemail</a
-      >)
+      your own risk and if it fails and your teacher finds this tool, all the best :D <br />
+      <br />Byeeee! <br /><br />
     </footer>
 
     <!-- Fixed Elements -->
@@ -389,8 +386,7 @@
         </div>
       </div>
     </section>
-    
-
+   
     <script
       src="./js/vendors/html2canvas.min.js"
       crossorigin="anonymous"

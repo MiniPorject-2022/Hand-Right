@@ -12,6 +12,17 @@ function addFontFromFile(fileObj) {
   };
   reader.readAsArrayBuffer(fileObj);
 }
+function addFontFromFirebase(fileObj) {
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    const newFont = new FontFace('temp-font', e.target.result);
+    newFont.load().then((loadedFace) => {
+      document.fonts.add(loadedFace);
+      pageEl.style.fontFamily = 'temp-font';
+    });
+  };
+  reader.readAsArrayBuffer(fileObj);
+}
 
 /**
  * @method createPDF
